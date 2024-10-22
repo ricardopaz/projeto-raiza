@@ -656,9 +656,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "twig/twig": 20,
+        "catfan/medoo": 20,
         "klein/klein": 20,
-        "catfan/medoo": 20
+        "respect/validation": 5,
+        "twig/twig": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
