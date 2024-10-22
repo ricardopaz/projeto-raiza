@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça Login!!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="public/heading/assets/css/header.css">
+    <link rel="stylesheet" href="public/footer/assets/css/footer.css">
+    <link rel="stylesheet" href="public/login/assets/css/login.css">
+    <link rel="stylesheet" href="public/errorHandler.css">
+</head>
+
+<body>
+    {% include 'src/heading/header.html' %}
+
+    <main class="box-main">
+        <div class="new-users">
+            <div class="tittle-box">
+                <h2>Clientes Cadastrados</h2>
+                <p>Se você possui uma conta conosco, acesse abaixo com seu e-mail e senha.</p>
+            </div>
+            <div class="box-form">
+                <form method="POST" action="/login/enviar" class="form-register">
+
+
+                    <div class="insert-box">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email">
+                    </div>
+
+                    <div class="insert-box">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha">
+                        <span class="icon-eye"><i class="bi bi-eye"></i></span>
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+
+                    <div class="box-button">
+                        <button><a href="">Acessar minha conta</a></button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="new-users">
+            <div class="tittle-box">
+                <h2>Novos Clientes</h2>
+                <p>Ao criar uma conta em nossa loja, você será capaz de se mover através do processo de compra
+                    rapidamente, armazenar múltiplos endereços de envio, ver e rastrear seus pedidos em sua conta e
+                    muito mais.</p>
+            </div>
+            <div class="box-button">
+                <a href="cadastro.php"><button>Criar uma conta</button></a>
+            </div>
+        </div>
+    </main>
+
+
+    {% include 'src/footer/footer.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="public/heading/assets/js/header.js"></script>
+    <script src="public/errorHandler.js"></script>
+</body>
+
+</html>

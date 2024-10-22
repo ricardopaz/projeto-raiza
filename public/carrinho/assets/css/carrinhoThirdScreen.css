@@ -1,0 +1,146 @@
+#third-screen {
+  flex-direction: column;
+  width: auto;
+  padding: 20px 40px;
+  border: 1px solid #ececec;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.tittle-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.tittle-information p:first-child {
+  font-weight: 900;
+}
+
+.tittle-information p:last-child {
+  font-weight: 500;
+}
+
+.information-whatsapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+
+.box-qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+}
+
+.box-qr-code img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.box-qr-code a {
+  text-decoration: none;
+  background: #ff69b4;
+  color: white;
+  padding: 16px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.step-by-step-whatsapp {
+  margin-top: 6px;
+  font-size: 14px;
+  align-self: self-start;
+  font-weight: 500;
+  width: 100%;
+}
+
+.step-by-step-whatsapp ol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step-by-step-whatsapp li:last-child {
+  list-style-type: none;
+}
+
+.step-by-step-whatsapp li:last-child a {
+  font-weight: 400;
+  color: #ff69b4;
+  font-size: 12px;
+}
+
+.box-number-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px 0px;
+  width: 100%;
+  background: #f5f5f5;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.box-number-order p {
+  margin-bottom: 0;
+}
+
+.box-number-order p:last-child {
+  font-weight: bolder;
+}
+
+.box-seconds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-seconds a {
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.box-seconds p {
+  color: #ccc;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (large desktops, 992px and up) */
+@media (min-width: 992px) {
+  #third-screen {
+    flex-direction: column;
+  }
+
+  .information-whatsapp {
+    flex-direction: row;
+  }
+
+  .step-by-step-whatsapp {
+    width: 60%;
+  }
+
+  .box-number-order {
+    width: 60%;
+  }
+}
+
+/* Extra large devices (larger desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

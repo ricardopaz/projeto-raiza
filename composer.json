@@ -1,0 +1,13 @@
+{
+    "name": "lambs/senamakeup",
+    "description": "Senamake",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "version": "1.0",
+    "require": {
+        "twig/twig": "3.x-dev",
+        "klein/klein": "dev-master",
+        "catfan/medoo": "dev-master",
+        "respect/validation": "^2.3@RC"
+    }
+}

@@ -1,0 +1,167 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.box-main {
+  display: flex;
+  height: auto;
+  justify-content: space-around;
+  padding: 100px 40px;
+}
+
+.new-users {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 28%;
+}
+
+.tittle-box {
+  text-align: center;
+  border-bottom: 2px solid #999999;
+}
+
+.new-users:last-child .tittle-box {
+  border-bottom: none;
+}
+
+.tittle-box h2 {
+  color: #ff69b4;
+  font-size: 28px;
+}
+.tittle-box p {
+  font-size: 16px;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.insert-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.insert-box input {
+  height: 38px;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  padding: 14px;
+  outline: none;
+}
+
+.insert-box a {
+  color: #ff69b4;
+  text-align: end;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.icon-eye {
+  position: absolute;
+  top: 54%; /* Centraliza verticalmente o ícone no input */
+  right: 10px; /* Posiciona o ícone à direita */
+  transform: translateY(-50%); /* Ajusta a centralização perfeita */
+  cursor: pointer;
+}
+
+.new-users button {
+  height: 38px;
+  width: 60%;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff69b4;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.box-button {
+  display: flex;
+  justify-content: center;
+}
+
+.box-button button {
+  width: auto;
+}
+
+.box-button a {
+  color: #fff;
+  text-decoration: none;
+  height: auto;
+}
+@media (max-width: 575.98px) {
+  .new-users {
+    min-width: 150px;
+  }
+  .new-users:first-child .box-form {
+    margin-top: 130px;
+    width: 90vw;
+  }
+
+  .new-users:first-child {
+    gap: 40px;
+  }
+
+  .new-users:last-child {
+    gap: 2px;
+  }
+
+  .new-users:last-child .box-button {
+    position: relative;
+    right: 26px;
+    width: 200px;
+  }
+  .new-users:last-child button {
+    padding: 8px;
+  }
+
+  .new-users button {
+    font-size: 12px;
+  }
+  .tittle-box {
+    padding: 0px;
+    text-align: left;
+    border: none;
+  }
+
+  .tittle-box h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-main {
+    padding: 20px 8px;
+  }
+  .new-users {
+    width: 44%;
+  }
+}
+
+@media (min-width: 768px) {
+  .box-main {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 992px) {
+  .new-users {
+    width: 44%;
+  }
+  .new-users button {
+    padding: 0 20px;
+    width: fit-content;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

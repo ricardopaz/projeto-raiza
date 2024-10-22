@@ -1,0 +1,79 @@
+footer {
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to top, #fd87c2 10%, white 90%);
+  border-top: 4px solid #ff69b4;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 80px 20px;
+}
+
+.info-box {
+  font-size: 14px;
+}
+
+.info-box a {
+  color: #000;
+  text-decoration: none;
+}
+
+.info-box h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff69b4;
+}
+
+.info-box p {
+  margin: 0;
+}
+
+.form-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-newsletter input {
+  border: 2px solid #999999;
+  height: 46px;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.form-newsletter input:focus {
+  outline: none;
+}
+
+.form-newsletter button {
+  height: 44px;
+  background-color: #ff69b4;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+}
+
+footer > p {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column-reverse;
+    padding-top: 40px;
+    gap: 34px;
+  }
+  footer > p {
+    font-size: 12px;
+  }
+}
+
+/* Estilos para telas grandes */
+@media (min-width: 768px) {
+  .info-box {
+    width: 270px;
+  }
+}

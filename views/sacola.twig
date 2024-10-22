@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sena MakeUP | Sacola</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="public/heading/assets/css/header.css">
+    <link rel="stylesheet" href="public/sacola/assets/css/sacola.css">
+    <link rel="stylesheet" href="public/footer/assets/css/footer.css">
+    <link rel="stylesheet" href="public/errorHandler.css">
+</head>
+
+<body>
+    {% include 'src/heading/header.html' %}
+    <main>
+
+        <!-- Se tiver produto na sacola mostra a 2 section, SE NÃO mostra a primeira section <!-->
+        <section id="section-bag-empty">
+            <div class=" box-empty-bag">
+                <div class="box-img-empty-bag">
+                    <img src="../website-sena-make-up/src/sacola/assets/img/icons8-vilta-frontal-da-bolsa-100 1.png"
+                        alt="">
+                </div>
+                <h2>Sua sacola está vazia.</h2>
+                <p>Você ainda não adicionou nenhum produto à sacola :(</p>
+                <div class="box-back-home">
+                    <a href="/">Continuar Comprando
+                        <span>
+                            <img src="../website-sena-make-up/src/sacola/assets/img/icons8-avancar-50.png" alt="">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-bag-full" style="display: none;">
+            <div class="box-full-bag">
+                <p id="productsBag">Sacola (1 produto)</p>
+                <div class="box-term">
+                </div>
+                <div class="box-description-term">
+                    <p>Normal (até 7 dias úteis)</p>
+                    <p>R$9,90</p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Produto
+                            </th>
+                            <th>
+                                Quantidade
+                            </th>
+                            <th>
+                                Entrega
+                            </th>
+                            <th>
+                                Preço
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for c in cartItems %}
+                            <tr>
+                            <td class="primary-column">
+                                <div class="info-product">
+                                    <img src="{{ c.image }}" alt="">
+                                    <div>
+                                        <p>{{ c.name}}</p>
+                                        <p>{{ c.category }}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="box-column-table">
+                                <div class="column-quantidade">
+                                    <input type="number" id="quantidade" name="quantidade" min="1" max="20" step="1"
+                                        value='{{ c.quantity }}'>
+                                    <p class="remove-item" data-id="{{ c.id }}">Remover</p>
+                                </div>
+                            </td>
+                            <td>
+                                Até 7 dias úteis
+                            </td>
+                            <td>
+                                R$ {{ c.total }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="box-finish-buy">
+                <div class="box-info-price">
+                    <div class="price-product">
+                        <p>Produto: <span id="productsBagSpan">{{ totalItems }}</span></p>
+                        <p><span>R$29,15</span>R$ {{ total }}</p>
+                    </div>
+                    <div class="box-term">
+                        <p>Frete</p>
+                        <p>R$9,90</p>
+                    </div>
+                </div>
+                <div class="box-price-total">
+                    <p>Total:</p>
+                    <p>R$ {{ total + 9.90 }}</p>
+                </div>
+                <a href="/carrinho" class="button-finish-buy">Finalizar compra</a>
+                <a href="/">Continuar Comprando <span style="color: black;">></span></a>
+            </div>
+        </section>
+    </main>
+
+    <?php include './src/footer/footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+
+    </script>
+    <script src="public/heading/assets/js/header.js"></script>
+    <script src="public/sacola/assets/js/sacola.js"></script>
+    <script src="public/errorHandler.js"></script>
+
+</body>
+
+</html>
