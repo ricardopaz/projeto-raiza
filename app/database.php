@@ -11,10 +11,10 @@ class DatabaseController {
     try {
       $this->con = new Medoo([
         "type" => "mysql",
-        "host" => "localhost",
-        "database" => "senadb",
-        "username" => "root",
-        "password" => ""
+        "host" => "sp6xl8zoyvbumaa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "database" => "r9arzv0cve5cslwu",
+        "username" => "saqwjr0v0u275yoy",
+        "password" => "rvjn1ovkaw21utoo"
       ]);
 
       $this->status = "Success";
